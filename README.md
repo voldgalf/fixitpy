@@ -22,7 +22,7 @@ pip install fixitpy
 ### Import the library
 
 ````py
-from fixitpy import find_guide
+from fixitpy import guides
 ````
 
 ### Using the library
@@ -30,16 +30,16 @@ from fixitpy import find_guide
 #### Getting a guide
 
 ````py
-found_guide = find_guide(123) # call the find_guide function which returns a dict
+found_guide = guides.retrieve_guide(123) # call the find_guide function which returns a dict
 
 print(found_guide.get("title")) # get various dict members
 print(found_guide.get("difficulty"))
 ````
 
 #### Getting a guide *with prerequisites*
-
+Many iFixit guides provide prerequisite guides, this is optional to retrieve
 ````py
-found_guide = find_guide(123, get_prerequisites=True) # call the find_guide function which returns a dict
+found_guide = guides.retrieve_guide(123, get_prerequisites=True) # call the find_guide function which returns a dict
 
 print(found_guide.get("title")) # get various dict members
 print(found_guide.get("difficulty"))
@@ -50,9 +50,13 @@ print(found_guide.get("difficulty"))
 ````py
 from fixitpy import find_guide
 
-found_guide = find_guide(123) # call the find_guide function which returns a dict
+found_guide = guides.retrieve_guide(123) # call the find_guide function which returns a dict
 
 print(found_guide.get("title")) # get various dict members
 print(found_guide.get("difficulty"))
 ````
+
+# License 
+
 ---
+["MIT License"](/LICENSE)
