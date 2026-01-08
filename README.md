@@ -56,7 +56,6 @@ print(found_guide.get("title")) # get various dict members
 print(found_guide.get("difficulty"))
 ````
 
-# License 
+# License
 
----
-["MIT License"](/LICENSE)
+MIT License
