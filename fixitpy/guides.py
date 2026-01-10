@@ -4,7 +4,6 @@ import requests
 
 IFIXIT_API_URL = 'https://www.ifixit.com/api/2.0'
 
-
 def retrieve_guide(guide_id, get_prerequisites=False):
     """
         Retrieve an iFixit guide given the guide ID.

@@ -22,7 +22,7 @@ pip install fixitpy
 ### Import the library
 
 ````py
-from fixitpy import guides
+import fixitpy
 ````
 
 ### Using the library
@@ -30,7 +30,7 @@ from fixitpy import guides
 #### Getting a guide
 
 ````py
-found_guide = guides.retrieve_guide(123) # call the find_guide function which returns a dict
+found_guide = fixitpy.retrieve_guide(123) # call the find_guide function which returns a dict
 
 print(found_guide.get("title")) # get various dict members
 print(found_guide.get("difficulty"))
@@ -39,7 +39,7 @@ print(found_guide.get("difficulty"))
 #### Getting a guide *with prerequisites*
 Many iFixit guides provide prerequisite guides, this is optional to retrieve
 ````py
-found_guide = guides.retrieve_guide(123, get_prerequisites=True) # call the find_guide function which returns a dict
+found_guide = fixitpy.retrieve_guide(123, get_prerequisites=True) # call the find_guide function which returns a dict
 
 print(found_guide.get("title")) # get various dict members
 print(found_guide.get("difficulty"))
@@ -48,9 +48,9 @@ print(found_guide.get("difficulty"))
 ## Full example
 
 ````py
-from fixitpy import find_guide
+import fixitpy
 
-found_guide = guides.retrieve_guide(123) # call the find_guide function which returns a dict
+found_guide = fixitpy.retrieve_guide(123) # call the find_guide function which returns a dict
 
 print(found_guide.get("title")) # get various dict members
 print(found_guide.get("difficulty"))
