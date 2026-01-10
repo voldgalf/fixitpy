@@ -1,10 +1,11 @@
 """FixitPy package."""
 
 import requests
+from typing import Optional
 
 IFIXIT_API_URL = 'https://www.ifixit.com/api/2.0'
 
-def retrieve_guide(guide_id, get_prerequisites=False):
+def retrieve_guide(guide_id, get_prerequisites=False) -> Optional[dict]:
     """
         Retrieve an iFixit guide given the guide ID.
 
@@ -21,7 +22,7 @@ def retrieve_guide(guide_id, get_prerequisites=False):
     response = requests.get(request_url,allow_redirects=False, timeout=5)
 
     if response.status_code != 200:
-        return None
+        return {}
 
     if 'application/json' not in response.headers.get('Content-Type', ''):
         return None
@@ -54,10 +55,3 @@ def retrieve_guide(guide_id, get_prerequisites=False):
             "introduction": response_json.get("introduction_raw"),
             "prerequisites": prerequisites,
             "guide_id": response_json.get("guideid")}
-
-if __name__ == "__main__":
-    guide = retrieve_guide(6020, get_prerequisites=False)
-    if guide:
-        print(guide.get("title"))
-        print(f"Difficulty: {guide.get('difficulty')}")
-        print(f"Introduction: {guide.get('introduction')}")
