@@ -1,4 +1,4 @@
-from guides import retrieve_guide
+from .guides import retrieve_guide
 
 __all__ = ["retrieve_guide"]
 
