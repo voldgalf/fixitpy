@@ -1,12 +1,48 @@
 """FixitPy package."""
+
 from typing import Optional
 
 import requests
 
 IFIXIT_API_URL = 'https://www.ifixit.com/api/2.0'
 
+def retrieve_media(media_id: int) -> Optional[dict]:
+    """
+        Retrieve an iFixit media dictionary given the guide ID.
 
-def retrieve_guide(guide_id, get_prerequisites=False) -> Optional[dict]:
+        Parameters:
+        media_id (int): The ID for the media requested.
+
+        Returns:
+        dict: A dictionary containing the media data.
+    """
+
+    request_url = f"{IFIXIT_API_URL}/media/images/{media_id}"
+
+    response = requests.get(request_url, allow_redirects=False, timeout=5)
+
+    if response.status_code != 200:
+        return {}
+
+    if 'application/json' not in response.headers.get('Content-Type', ''):
+        return {}
+
+    response_json = response.json()
+
+    size_json = {}
+
+    for size in response_json.get('image', {}).items():
+        if not size[0] in ["id", "guid"]:
+            size_json[size[0]] = size[1]
+
+    return {
+        'media_id': response_json.get('image', {}).get('id'),
+        'width': response_json.get('width'),
+        'height': response_json.get('height'),
+        'sizes' : size_json,
+    }
+
+def retrieve_guide(guide_id: int, get_prerequisites=False) -> Optional[dict]:
     """
         Retrieve an iFixit guide given the guide ID.
 
@@ -15,7 +51,7 @@ def retrieve_guide(guide_id, get_prerequisites=False) -> Optional[dict]:
         get_prerequisites (bool): Whether to return a guide's prerequisites.
 
         Returns:
-        dict: A dictionary containing the guide's information.
+        dict: A dictionary containing the guide data.
     """
 
     request_url = f"{IFIXIT_API_URL}/guides/{guide_id}"
@@ -26,7 +62,7 @@ def retrieve_guide(guide_id, get_prerequisites=False) -> Optional[dict]:
         return {}
 
     if 'application/json' not in response.headers.get('Content-Type', ''):
-        return None
+        return {}
 
     response_json = response.json()
 
@@ -49,22 +85,13 @@ def retrieve_guide(guide_id, get_prerequisites=False) -> Optional[dict]:
             guide = retrieve_guide(_prerequisite.get('guideid'), get_prerequisites=False)
             prerequisites.append(guide)
 
-    return {"title": response_json.get("title"),
-            "steps": steps,
-            "conclusion": response_json.get("conclusion_raw"),
-            "difficulty": response_json.get("difficulty"),
-            "introduction": response_json.get("introduction_raw"),
-            "prerequisites": prerequisites,
-            "guide_id": response_json.get("guideid")}
+    return {
+        "title": response_json.get("title"),
+        "steps": steps,
+        "conclusion": response_json.get("conclusion_raw"),
+        "difficulty": response_json.get("difficulty"),
+        "introduction": response_json.get("introduction_raw"),
+        "prerequisites": prerequisites,
+        "guide_id": response_json.get("guideid")
+    }
 
-
-if __name__ == "__main__":
-    found_guide = retrieve_guide(123,
-                                 get_prerequisites=True)  # call the retrieve_guide function which returns a dict
-
-    print(found_guide.get("title"))
-    print(found_guide.get("difficulty"))
-
-    for step in found_guide.get("steps"):
-        print(step.get("title"))
-        print(step.get("steps"))

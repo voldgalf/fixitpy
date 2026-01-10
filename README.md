@@ -3,7 +3,7 @@
 ![PyPI - License](https://img.shields.io/pypi/l/fixitpy)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/voldgalf)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/50calibursword)
-[![PyPI](https://img.shields.io/badge/PyPI-3775A9?logo=pypi&logoColor=fff)](https://pypi.org/project/fixitpy/)
+[![PyPI](https://img.shields.io/badge/PyPI-?logo=pypi&logoColor=fff)](https://pypi.org/project/fixitpy/)
 
 Python iFixit API interface.
 
