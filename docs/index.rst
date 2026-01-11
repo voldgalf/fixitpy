@@ -14,14 +14,6 @@ Welcome to FixitPy's documentation!
         :link-type: url
 
     .. shield::
-        :logo: PyPi
-        :message: PyPi
-        :label-color: yellow
-        :color: yellow
-        :link: https://pypi.org/project/FixitPy/
-        :link-type: url
-
-    .. shield::
         :label: License
         :message: MIT
         :color: yellow
