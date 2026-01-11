@@ -1,4 +1,5 @@
 # FixitPy
+
 [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/voldgalf/fixitpy)
 ![PyPI - License](https://img.shields.io/pypi/l/fixitpy)
 [![PyPI](https://img.shields.io/badge/PyPI-3775A9?logo=pypi&logoColor=fff)](https://pypi.org/project/fixitpy/)
@@ -6,9 +7,9 @@
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/50calibursword)
 [![Static Badge](https://img.shields.io/badge/Documentation-blue)](https://fixitpy.readthedocs.io/en/latest/)
 
-Python iFixit API interface.
+FixitPy is a uncomplicated Python library for interfacing with iFixit's API.
 
-Currently, you can retrieve guides and their prerequisite guides
+Allowing repair guides to be programmatically retrieved.
 ## Installation
 
 ````bash
