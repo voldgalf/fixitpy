@@ -3,6 +3,11 @@ Welcome to Fixitpy's documentation!
 
 **fixitpy** is a Python library for interfacing with iFixit's API interface.
 
+.. image:: https://img.shields.io/badge/docs-sphinx-blue
+   :alt: Documentation built with Sphinx
+   :target: https://www.sphinx-doc.org/
+
+
 Installation
 ------------
 
