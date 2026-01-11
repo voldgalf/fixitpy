@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fixitpy"
-version = "0.2.18"
+version = "0.2.19"
 description = "iFixit REST API Interface"
 readme = "README.md"
 license = "MIT"
@@ -13,8 +13,10 @@ requires-python = ">=3.8"
 dependencies = [
     "requests",
 ]
+
 [project.urls]
-"Homepage" = "https://github.com/voldgalf/fixitpy"
+Homepage = "https://github.com/voldgalf/fixitpy"
+Documentation = "https://fixitpy.readthedocs.io/en/latest/"
 
 [tool.hatch.metadata]
 allow-direct-references = true

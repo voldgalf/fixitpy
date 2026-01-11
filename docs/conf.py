@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.abspath('..'))
 project = 'FixitPy'
 copyright = '2026, Michael MacMullen'
 author = 'Michael MacMullen'
-release = '0.2.18'
+release = '0.2.19'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -42,6 +42,6 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'scrolls'
+html_theme = 'alabaster'
 html_static_path = ['_static']
 
