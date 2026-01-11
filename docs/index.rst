@@ -34,7 +34,6 @@ Example Usage
     import fixitpy
 
     guide = FixitPy.retrieve_guide(123)
-    # 123 is an example and can be changed
 
     print(f"Title: {guide.get("title")}")
     print(f"Difficulty: {guide.get("difficulty")}")
