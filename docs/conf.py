@@ -27,6 +27,12 @@ extensions = [
     "sphinx_design_elements",
 ]
 
+html_theme_options = {
+    'logo': 'logo.png',
+    'github_user': 'voldgalf',
+    'github_repo': 'fixitpy',
+}
+
 templates_path = ['_templates']
 exclude_patterns = []
 
