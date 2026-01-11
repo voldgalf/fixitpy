@@ -25,8 +25,9 @@ import fixitpy
 found_guide = fixitpy.retrieve_guide(123)
 
 # As any regular dictionary, you can retrieve specific values from it
-print(found_guide.get("title"))
-print(found_guide.get("difficulty"))
+print(f"Title: {found_guide.get("title")}")
+print(f"Difficulty: {found_guide.get("difficulty")}")
+print(f"Conclusion: {found_guide.get("conclusion")}")
 
 # The dictionary returned from 'retrieve_guide' contains a list refered to as 'steps'
 # Each list item contains a dictionary with the properties 'title', which is self explanatory and 'text', the process itself.

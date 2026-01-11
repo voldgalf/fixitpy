@@ -1,24 +1,26 @@
 """Retrieve iFixit media"""
 
 from typing import Optional
-
 import requests
 
 IFIXIT_API_URL = 'https://www.ifixit.com/api/2.0'
 
 def retrieve_media(media_id: int) -> Optional[dict]:
-    """Example function with types documented in the docstring.
+    """
+    Used to retrieve media from the iFixit API
 
-    Parameters
-    ----------
-    media_id : int
-        The ID for the media requested.
+    The returning dictionary contains:
 
-    Returns
-    -------
-    dict
-        Contains information about the media.
+    - ``media_id`` (int): ID of the media to retrieve
+    - ``width`` (int): Original width of the media
+    - ``height`` (int): Original height of the media
+    - ``sizes`` (dict): Dictionary of media sizes
 
+    :param media_id: the ID of the media to retrieve
+    :type media_id: int
+
+    :return: media dictionary
+    :rtype: dict or None
     """
 
     request_url = f"{IFIXIT_API_URL}/media/images/{media_id}"
