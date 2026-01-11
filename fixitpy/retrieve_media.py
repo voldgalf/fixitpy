@@ -1,4 +1,4 @@
-"""FixitPy package."""
+"""Retrieve iFixit media"""
 
 from typing import Optional
 

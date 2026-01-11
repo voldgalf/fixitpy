@@ -1,4 +1,4 @@
-"""FixitPy package."""
+"""FixitPy package"""
 
 from .retrieve_guide import retrieve_guide
 from .retrieve_media import retrieve_media

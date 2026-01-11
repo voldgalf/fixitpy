@@ -1,4 +1,4 @@
-"""FixitPy package."""
+"""Retrieve iFixit guide"""
 
 from typing import Optional
 
