@@ -6,6 +6,7 @@
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/voldgalf)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/50calibursword)
 [![Static Badge](https://img.shields.io/badge/Documentation-blue)](https://fixitpy.readthedocs.io/en/latest/)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/fixitpy)
 
 FixitPy is an uncomplicated Python library for interfacing with iFixit's API.
 
