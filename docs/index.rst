@@ -18,16 +18,27 @@ Welcome to FixitPy's documentation!
         :message: MIT
         :color: yellow
 
-
 Installation
 ------------
-
-To use FixitPy, first install it using pip:
 
 .. code-block:: console
 
    (.venv) $ pip install FixitPy
 
+Example Usage
+------------
+
+.. code-block:: python
+    :linenos:
+
+    import fixitpy
+
+    guide = FixitPy.retrieve_guide(123)
+    # 123 is an example and can be changed
+
+    print(f"Title: {guide.get("title")}")
+    print(f"Difficulty: {guide.get("difficulty")}")
+    print(f"Conclusion: {guide.get("conclusion")}")
 
 .. toctree::
 
