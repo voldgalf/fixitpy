@@ -28,11 +28,10 @@ extensions = [
 ]
 
 html_theme_options = {
-    'logo': 'logo.png',
+    #'logo': 'logo.png',
     'github_user': 'voldgalf',
     'github_repo': 'fixitpy',
-    'description': 'A Python interface for the iFixit',
-    'github_button' : True
+    'description': 'A Python interface for the iFixit'
 }
 
 templates_path = ['_templates']
